@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ClassLibrary1;
 
 namespace NewMvcApp.Controllers
 {
@@ -10,6 +11,8 @@ namespace NewMvcApp.Controllers
     {
         public IActionResult Index()
         {
+            Class1 cls = new Class1();
+            ViewBag.Square = cls.Square(42);
             return View();
         }
 
